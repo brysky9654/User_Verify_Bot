@@ -73,41 +73,6 @@ bot.on('chat_member', async (ctx) => {
             welcomeMessageId: welcomeMessage.message_id,
             interval
         });
-        // pendingVerifications.set(userId, {
-        //     chatId,
-        //     welcomeMessageId: welcomeMessage.message_id,
-        //     timeout: setTimeout(async () => {
-        //         // If the user hasn't verified within 1 minute, delete the message
-        //         if (pendingVerifications.has(userId)) {
-        //             await ctx.api.deleteMessage(chatId, welcomeMessage.message_id);
-        //             pendingVerifications.delete(userId);
-        //         }
-        //     }, 60000) // 1 minute
-        // });
-
-        // newUsers.set(userId, {
-        //     verified: false,
-        //     timeout: setTimeout(async () => {
-        //         // If not verified within 1 minute, delete bot's dialog
-        //         if (!newUsers.get(userId).verified) {
-        //             await deleteMessages(chatId, newUsers.get(userId).messages);
-        //             newUsers.delete(userId);
-        //         }
-        //         else {
-        //             return;
-        //         }
-        //     }, 60000), // 1 minute
-        //     messages: [],
-        // });
-
-        // const keyboard = new InlineKeyboard().text("Click to Verify", "verify");
-
-        // const welcomeMessage = await ctx.reply(
-        //     `Welcome, ${user.from.first_name}! Please click the button below to verify your join request.`,
-        //     { reply_markup: keyboard }
-        // );
-
-        // newUsers.get(userId).messages.push(welcomeMessage.message_id);
     }
 });
 
