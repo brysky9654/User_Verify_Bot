@@ -73,7 +73,6 @@ bot.on('chat_member', async (ctx) => {
             welcomeMessageId: welcomeMessage.message_id,
             interval
         });
-
         // pendingVerifications.set(userId, {
         //     chatId,
         //     welcomeMessageId: welcomeMessage.message_id,
